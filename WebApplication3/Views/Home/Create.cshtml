@@ -1,0 +1,34 @@
+﻿@model EFDataApp.Models.Base
+@{
+    ViewBag.Title = "Добавление заказа";
+}
+<form asp-action="create" asp-controller="home">
+
+    <div class="form-group">
+        <label asp-for="City_out" class="control-label">Город отправителя</label>
+        <input type="text" asp-for="City_out" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress_out" class="control-label">Адрес отправителя</label>
+        <input type="text" asp-for="Adress_out" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="City_in" class="control-label">Город получателя</label>
+        <input type="text" asp-for="City_in" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress_in" class="control-label">Адрес получателя</label>
+        <input type="text" asp-for="Adress_in" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Weight" class="control-label">Вес груза</label>
+        <input type="number" asp-for="Weight" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Date" class="control-label">Дата забора груза</label>
+        <input type="date" asp-for="Date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-danger" />
+    </div>
+</form>

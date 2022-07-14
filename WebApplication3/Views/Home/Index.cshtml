@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EFDataApp.Models.Base>
+@{
+    ViewBag.Title = "Все заказы";
+}
+<a asp-action="Create">Добавить Заказ</a>
+<table class="table">
+    <tr>
+        <td>Номер заказа</td>
+        <td>Город Отправителя</td>
+        <td>Адрес отправителя</td>
+        <td>Город получателя</td>
+        <td>Адрес получателя</td>
+        <td>Вес груза</td>
+        <td>Дата</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.City_out</td>
+            <td>@item.Adress_out</td>
+            <td>@item.City_in</td>
+            <td>@item.Adress_in</td>
+            <td>@item.Weight</td>
+            <td>@item.Date</td>
+        </tr>
+    }
+</table>
